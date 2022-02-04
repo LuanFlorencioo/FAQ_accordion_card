@@ -64,7 +64,7 @@ table {
 }
 
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
+abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
@@ -74,4 +74,27 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     font-size: 12px;
     font-family: 'Kumbh Sans', sans-serif;
     text-decoration: none;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.question {
+    width: 100%;
+    color: var(--text-dark);
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.answer {
+    display: none;
+    color: var(--text-grayish);
+}
+
+hr {
+    border: .5px solid var(--dividers);
 }
