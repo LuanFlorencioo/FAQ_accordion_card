@@ -49,3 +49,9 @@ function handleClick(e) {
 allQuestions.forEach((item) => {
     item.addEventListener('click', handleClick)
 })
+
+if (document.body.clientWidth > 1001.5) {
+    const getImg = document.querySelector('.illustration img');
+    getImg.setAttribute('src', '../images/illustration-box-desktop.svg');
+
+}
