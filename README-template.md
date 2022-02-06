@@ -99,9 +99,11 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+_Luan Florêncio._
+
+- GitHub - [LuanFlorencioo](https://github.com/LuanFlorencioo)
+- Frontend Mentor - [@LuanFlorencioo](https://www.frontendmentor.io/profile/LuanFlorencioo)
+- Twitter - [@LuanF_dev](https://www.twitter.com/LuanF_dev)
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
