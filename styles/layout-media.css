@@ -120,23 +120,15 @@
     }
 
     .illustration img:first-child {
-        /* position: relative;
-        width: min(32vw, 500px);
-        width: 100%; */
         display: block;
         position: relative;
+        height: min(184px, 12vw);
         top: 200px;
         left: -100px;
         
     }
     
     .illustration img:last-child {
-        /* position: relative;
-        width: min(32vw, 500px);
-        width: 150%;
-        height: 150%;
-        display: block;
-        top: -380px; */
         display: none;
     }
 
