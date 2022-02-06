@@ -1,3 +1,7 @@
+if (document.body.clientWidth > 1001.5) {
+    document.querySelector('.illustration img:first-child').setAttribute('src', '../images/illustration-box-desktop.svg');
+}
+
 const allQuestions = Array.from(document.querySelectorAll('.question'))
 const allAnswer = Array.from(document.querySelectorAll('.answer'));
 const allArrow = Array.from(document.querySelectorAll('img.arrow'))
@@ -49,9 +53,3 @@ function handleClick(e) {
 allQuestions.forEach((item) => {
     item.addEventListener('click', handleClick)
 })
-
-if (document.body.clientWidth > 1001.5) {
-    const getImg = document.querySelector('.illustration img');
-    getImg.setAttribute('src', '../images/illustration-box-desktop.svg');
-
-}
