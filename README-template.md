@@ -30,7 +30,16 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+- Desktop version:
+
+![Desktop](./images/screenshots/screenshot-faq-desktop.png)
+
+![Animation](./images/screenshots/screen-recorder.gif)
+
+- Mobile version:
+
+![Mobile](./images/screenshots/screenshot-faq-mobile.png)
+
 
 Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
@@ -53,7 +62,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS custom properties
 - Flexbox
 - Mobile-first workflow
-- Javascript
+- Accordion with Javascript
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
