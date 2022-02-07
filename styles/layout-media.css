@@ -36,6 +36,10 @@
         top: -31%;
     }
 
+    .box {
+        display: none;
+    }
+    
     .illustration img:first-child {
         position: relative;
         width: 250px;
@@ -119,16 +123,15 @@
         background-size: min(32vw, 500px);
     }
 
-    .illustration img:first-child {
+    .card .illustration img.box {
         display: block;
         position: relative;
         height: min(184px, 12vw);
-        top: 200px;
-        left: -100px;
-        
+        top: 205px;
+        left: -85px;
     }
-    
-    .illustration img:last-child {
+
+    .illustration img {
         display: none;
     }
 
