@@ -1,12 +1,8 @@
-if (document.body.clientWidth > 1001.5) {
-    document.querySelector('.illustration img:first-child').setAttribute('src', '../images/illustration-box-desktop.svg');
-}
+const allQuestions = Array.from(document.querySelectorAll('.question'));
+const allAnswers = Array.from(document.querySelectorAll('.answer'));
+const allArrows = Array.from(document.querySelectorAll('img.arrow'));
 
-const allQuestions = Array.from(document.querySelectorAll('.question'))
-const allAnswer = Array.from(document.querySelectorAll('.answer'));
-const allArrow = Array.from(document.querySelectorAll('img.arrow'))
-
-function handleClick(e) {
+function accordionEffect(e) {
     const localClick = e.target.localName;
 
     if (localClick === 'dt') {
@@ -15,41 +11,26 @@ function handleClick(e) {
         const arrow = e.target.lastChild;
 
         if (question.classList.contains('active')) {
-
             [question, answer, arrow].forEach(item => item.classList.toggle('active'));
-
-        } else {
-
-            allQuestions.forEach(question => question.classList.remove('active'));
-            allAnswer.forEach(answer => answer.classList.remove('active'));
-            allArrow.forEach(arrow => arrow.classList.remove('active'));
-
-            [question, answer, arrow].forEach(item => item.classList.toggle('active'));
-
         }
-
-    } else {
+        else {
+            [allQuestions, allAnswers, allArrows].forEach(item => item.forEach(items => items.classList.remove('active')));
+            [question, answer, arrow].forEach(item => item.classList.toggle('active'));
+        }
+    }
+    else {
         const arrow = e.target;
         const question = e.path[1];
         const answer = e.path[1].nextElementSibling;
 
         if (arrow.classList.contains('active')) {
-
             [question, answer, arrow].forEach(item => item.classList.toggle('active'));
-
-        } else {
-
-            allQuestions.forEach(question => question.classList.remove('active'));
-            allAnswer.forEach(answer => answer.classList.remove('active'));
-            allArrow.forEach(arrow => arrow.classList.remove('active'));
-
-            [question, answer, arrow].forEach(item => item.classList.toggle('active'));
-
         }
-        document.querySelector('h1').classList.toggle('active')
+        else {
+            [allQuestions, allAnswers, allArrows].forEach(item => item.forEach(items => items.classList.remove('active')));
+            [question, answer, arrow].forEach(item => item.classList.toggle('active'));
+        }
     }
 }
 
-allQuestions.forEach((item) => {
-    item.addEventListener('click', handleClick)
-})
+allQuestions.forEach(item => item.addEventListener('click', accordionEffect));
