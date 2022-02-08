@@ -1,5 +1,6 @@
 @import url(./main.css);
 
+/* Mobile version */
 @media (max-width: 1000px ) {
 
     body {
@@ -89,6 +90,7 @@
     }
 }
 
+/* Desktop version */
 @media (min-width: 1001.5px) {
 
     main {
