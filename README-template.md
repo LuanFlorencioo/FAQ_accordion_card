@@ -12,9 +12,7 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -28,11 +26,13 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Hide/Show the answer to a question when the question is clicked
 
-### Screenshot
+### Screenshots
 
 - Desktop version:
 
 ![Desktop](./images/screenshots/screenshot-faq-desktop.png)
+
+- interactivity:
 
 ![Animation](./images/screenshots/screen-recorder.gif)
 
@@ -40,19 +40,10 @@ Users should be able to:
 
 ![Mobile](./images/screenshots/screenshot-faq-mobile.png)
 
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: []()
+- Live Site URL: [FAQ accordion card](https://LuanFlorencioo.github.io/FAQ_accordion_card/)
 
 ## My process
 
@@ -60,61 +51,58 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Semantic HTML5 markup
 - CSS custom properties
+- Media Queries
 - Flexbox
 - Mobile-first workflow
-- Accordion with Javascript
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Keyframes animations
+- Accordion effect made with Javascript
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+It's always good to reinforce our learnings, whether in projects, challenges, or in life itself.
 
-To see how you can add code snippets, see below:
+Everything has its way of acquiring knowledge, and it was no different in this project. I was able to put into practice some of my knowledge acquired in HTML, CSS and javascript, but I also learned new things during development, such as interactivity when the mouse is over the question not activated. See the code snippet of the solution that I could think of below:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+  /* styles/main.css | row 84 */
+
+.question:not(.active):hover {
+  color: var(--soft-red);
 }
 ```
+
+Explaining the code above, I used for the first time a double selector selection in CSS for the question that doesn't have the "active" class and has the mouse cursor above it.
+
+As for the javascript interactivity, I wanted to put the accordion interaction in the arrows that were at the end of the question on the right side. With that, I inserted the arrow images inside the "dt" tags, and in the javascript, I added their respective effects.
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+// js/accordion.js  | row 22
+const arrow = e.target;
+const question = e.path[1];
+const answer = e.path[1].nextElementSibling;
+
+  if (arrow.classList.contains('active')) {
+    [question, answer, arrow].forEach(item => item.classList.toggle('active'));
+  }
+  else {
+    [allQuestions, allAnswers, allArrows].forEach(item => item.forEach(items => items.classList.remove('active')));
+    [question, answer, arrow].forEach(item => item.classList.toggle('active'));
+  };
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I know that I didn't use the resources of the ReactJs library, however, I intend to work using its availability in the future. It makes the application easier with usability of components, which in this case, would also work perfectly in the accordion interaction.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+As for the ongoing development inherited from this project, I intend to further study positioning in CSS, exclusively in flexbox and relative position. I need to improve, and with the future, doing new challenges and projects, the idea is to become more practical and natural.
 
 ## Author
 
-_Luan Florêncio._
+![Luan Florêncio](https://avatars.githubusercontent.com/u/71609088?s=120&v=4)
 
+_Luan Florêncio_
+
+- Contact e-mail - luanflorencio.dev@gmail.com
 - GitHub - [LuanFlorencioo](https://github.com/LuanFlorencioo)
 - Frontend Mentor - [@LuanFlorencioo](https://www.frontendmentor.io/profile/LuanFlorencioo)
 - Twitter - [@LuanF_dev](https://www.twitter.com/LuanF_dev)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
