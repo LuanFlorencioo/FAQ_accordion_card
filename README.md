@@ -102,7 +102,6 @@ As for the ongoing development inherited from this project, I intend to further 
 
 _Luan Florêncio_
 
-- Contact e-mail - luanflorencio.dev@gmail.com
 - GitHub - [LuanFlorencioo](https://github.com/LuanFlorencioo)
 - Frontend Mentor - [@LuanFlorencioo](https://www.frontendmentor.io/profile/LuanFlorencioo)
 - Twitter - [@LuanF_dev](https://www.twitter.com/LuanF_dev)
